@@ -11,3 +11,11 @@ How to build this project
 7. version : 1.0-Snapshot (choose Default)
 8. package : learn.labs.maven
 
+
+### Maven lifecycle
+1. mvn clean -> untuk menghapus folder target
+2. mvn compile -> melakukan compilasi source code
+3. mvn test-compile -> melakukan kompilasi unit test
+4. mvn test -> menjalankan unit test
+5. mvn package -> mem package project menjadi pakaging nya (jar/war/dll)
+
