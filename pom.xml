@@ -79,6 +79,37 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+
+        <!-- Untuk membundle binary file menjadi satu -->
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>3.6.0</version>
+          <configuration>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+
+            <!-- Beritahu lokasi main class nya -->
+            <archive>
+              <manifest>
+                <mainClass>learn.labs.maven.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+          <!-- Jadikan itu sebagai distribution File (Jar)-->
+          <executions>
+            <execution>
+              <id>make-assembly</id> <!-- this is used for inheritance merges -->
+              <phase>package</phase> <!-- bind to the packaging phase -->
+              <goals>
+                <goal>single</goal>
+              </goals>
+            </execution>
+          </executions>
+          <!-- Setelah selesai bisa menjalankan command: mvn clean package assembly:single -->
+        </plugin>
+
+
       </plugins>
     </pluginManagement>
   </build>

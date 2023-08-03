@@ -19,3 +19,12 @@ How to build this project
 4. mvn test -> menjalankan unit test
 5. mvn package -> mem package project menjadi pakaging nya (jar/war/dll)
 
+
+### Membuat Distribution File
+* Salah satu plugin yg bisa di gunakan untuk membuat distribution file berserta dependency yg kita butuhkan adalah Assembly Plugin
+* https://maven.apache.org/plugins/maven-assembly-plugin/usage.html
+* untuk membuat distribution file bisa menggunakan command : `mvn package assembly:single`
+* Lalu untuk menjalankan gunakan perintah : `java -jar .\target\belajar-apache-maven-1.0-SNAPSHOT-jar-with-dependencies.jar
+* setelah itu bisa di upload ke server atau di jadikan docker image juga bisa
+  `
+
