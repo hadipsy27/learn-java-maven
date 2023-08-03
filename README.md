@@ -25,6 +25,9 @@ How to build this project
 * https://maven.apache.org/plugins/maven-assembly-plugin/usage.html
 * untuk membuat distribution file bisa menggunakan command : `mvn package assembly:single`
 * Lalu untuk menjalankan gunakan perintah : `java -jar .\target\belajar-apache-maven-1.0-SNAPSHOT-jar-with-dependencies.jar`
+* Dikarenakan sekarang ada update menjadi multi module dependency maka main classnya sekarang ada di belajar-apache-maven-app
+* maka distribution file nya sekarang juga berada di belajar-apache-maven-app
+* untuk menjalankan file jar dapat menggunakan command : `java -jar .\belajar-apache-maven-app\target\belajar-apache-maven-app-1.0-SNAPSHOT-jar-with-dependencies.jar`
 * setelah itu bisa di upload ke server atau di jadikan docker image juga bisa
   `
 
